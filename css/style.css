@@ -1,4 +1,233 @@
-html,body{
+/* importing poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@300;500&display=swap');
+
+/* using box-sizing for padding margin */
+*{
+    box-sizing: border-box;
+    transition:all ease-in-out 250ms;
+}
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    color:#333;
+}
+img{
+    max-width:100%;
+    height:auto;
+}
+.container{
+    max-width:1200px;
+    display:flex;
+    margin:0 auto;
+    justify-content: center;;
+}
+
+/* typography ===============*/
+
+
+.title h4{
+    font-family: 'Raleway',sans-serif ;
+    font-weight:300;
+    font-size: 1.5em;
+    margin:10px 0;
+}
+.title h1{
+    margin:0;
+    font-size:2em;
+    font-weight:300;
+}
+.title span{
+    display:block;
+}
+.title p{
+    font-family: 'raleway',sans-serif;
+    font-weight:300;
+    color:#666;
+    font-size:.8em;
+    margin-bottom: 2em;
+}
+.title p span {
+    display:block;
+}
+
+/*typography media for mobile view */
+@media(max-width:900px){
+    .title h1{
+        font-size: 1.4em;
+    }
+    .title h4 {
+        font-size: 1.2em;
+    }
+}
+/* buttons ====================== */
+.button{
+    text-transform: capitalize;   
+    text-decoration: none;
+    border:2px solid #1769ff;
+    border-radius:25px;
+    color:#1769ff;
+    padding:.5em 1.5em;
+    background-color: inherit;
+}
+.button-blue{
+    background-color: #1769ff;
+    font-size: 0.8em;
+    padding: .5em 2em;
+    color:#fff;
+    text-transform: uppercase;
+}
+.button-blue:hover,
+.button-blue:focus{
+    background-color: #f7f6f4;
+    color:#1769ff;
+}
+
+/*buttons media for mobile view */
+@media(max-width:900px){
+    .button{
+        padding:.4em .7em;
+    }
+}
+
+/* start header */
+header{
+    background-color:#f7f6f4;
+    padding: 1.5em;
+}
+
+header nav{
+    padding:20px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+header nav .logo{
+    font-size:1.3em; 
+    letter-spacing: 5px;
+    text-transform:uppercase;
+    color:#333;
+    text-decoration: none;
+    text-shadow: 1px 1px 6px #a8a5a2
+}
+header nav .logo span{
+    font-size: 1.1em;
+    font-weight:600;
+    font-family:times;
+}
+
+header nav ul{
     margin:0;
     padding:0;
+    font-weight: 300;
+    list-style:none;
+    position: relative;
+    right:3em;
 }
+header nav ul li{
+    margin-left:1.3em;
+
+    /* use display inline-block instead of float on li item inside nav :3 */
+    display:inline-block;
+
+}
+header nav ul li a{
+    text-decoration:none;
+    text-transform: capitalize;
+    padding:.4em 1em;
+    border-radius:2em;
+    color:#333;
+}
+header nav ul li a:hover,
+header nav ul li a:focus{
+    color:white;
+    background-color:#1769ff;
+}
+
+/* header media for mobile view */
+@media(max-width:900px){
+    header{
+        padding:0;
+    }
+    header nav {
+        flex-direction:column;
+        padding:20px 0;
+    }
+    header nav ul{
+        position:static;
+    }
+    header nav ul li{
+        margin: 20px 0;
+    }
+
+    
+}
+/* end header */
+
+/* start home banner */
+#home-banner{
+    display:flex;
+    justify-content: space-between;
+    background-color:#f7f6f4;
+}
+#home-banner .banner-img{
+    display:flex;
+    flex-basis:45%;
+}
+#home-banner .banner-img img{
+    max-height:80vh;
+}
+
+
+#home-banner .title{
+    display:flex;
+    padding:0 30px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 45%;
+}
+/*banner media for mobile view */
+@media(max-width:900px){
+   #home-banner{
+    flex-direction: column-reverse;     
+   }
+    #home-banner .banner-img img{
+        display:none;
+    }
+    #home-banner .title{
+        text-align:center;
+        align-items:center;
+        padding-bottom:2em
+    }
+    header nav ul li a{
+        padding:.4em .6em;
+    }
+   
+
+}
+/* end home banner */
+
+/* start about services */
+#about{
+    text-align:center;
+    padding:6em 0;
+}
+
+#about  .container{
+    justify-content: space-between;
+    align-items: baseline;
+}
+#about .container .about-box{
+    flex-basis:30%;
+    padding:2em
+}
+
+/* about media for mobile */
+@media(max-width:900px){
+    #about .container{
+        flex-direction:column;
+    }
+}
+
+/* end about services */

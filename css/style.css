@@ -1,7 +1,7 @@
 /* importing poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@300;500&display=swap');
 
-/* using box-sizing for padding margin */
+/* General styles */
 *{
     box-sizing: border-box;
     transition:all ease-in-out 250ms;
@@ -23,9 +23,8 @@ img{
     justify-content: center;;
 }
 
+
 /* typography ===============*/
-
-
 .title h4{
     font-family: 'Raleway',sans-serif ;
     font-weight:300;
@@ -50,7 +49,26 @@ img{
 .title p span {
     display:block;
 }
-
+.section-title{
+    position: relative;
+}
+.opacity-title{
+    font-size: 2em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: .1;
+}
+.visible-title{
+    font-size:1.4em;
+    letter-spacing:4px;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom:-.5em
+}
 /*typography media for mobile view */
 @media(max-width:900px){
     .title h1{
@@ -60,6 +78,7 @@ img{
         font-size: 1.2em;
     }
 }
+
 /* buttons ====================== */
 .button{
     text-transform: capitalize;   
@@ -90,7 +109,8 @@ img{
     }
 }
 
-/* start header */
+
+/* start header ====================*/
 header{
     background-color:#f7f6f4;
     padding: 1.5em;
@@ -129,7 +149,6 @@ header nav ul li{
 
     /* use display inline-block instead of float on li item inside nav :3 */
     display:inline-block;
-
 }
 header nav ul li a{
     text-decoration:none;
@@ -143,7 +162,6 @@ header nav ul li a:focus{
     color:white;
     background-color:#1769ff;
 }
-
 /* header media for mobile view */
 @media(max-width:900px){
     header{
@@ -159,10 +177,9 @@ header nav ul li a:focus{
     header nav ul li{
         margin: 20px 0;
     }
-
-    
 }
 /* end header */
+
 
 /* start home banner */
 #home-banner{
@@ -177,8 +194,6 @@ header nav ul li a:focus{
 #home-banner .banner-img img{
     max-height:80vh;
 }
-
-
 #home-banner .title{
     display:flex;
     padding:0 30px;
@@ -203,15 +218,14 @@ header nav ul li a:focus{
     header nav ul li a{
         padding:.4em .6em;
     }
-   
-
 }
 /* end home banner */
 
-/* start about services */
+
+/* start about services ==============*/
 #about{
     text-align:center;
-    padding:6em 0;
+    padding:3em 0;
 }
 
 #about  .container{
@@ -220,14 +234,48 @@ header nav ul li a:focus{
 }
 #about .container .about-box{
     flex-basis:30%;
-    padding:2em
+    padding:3em;
+}
+#about .container .about-box h4,
+#about .container .about-box p{
+    transition: initial;
 }
 
+#about .container .about-box .icon{
+    font-size: 2.5em;
+    color:#1769ff;
+    margin-top:1em;
+}
+#about .container .about-box:hover,
+#about .container .about-box:focus{
+    background-color:#1769ff;
+    color:#fff;
+    border-radius:5px
+}
+#about .container .about-box:hover .icon {
+    color:#fff
+}
 /* about media for mobile */
 @media(max-width:900px){
+    #about{
+        padding: 1em 0;
+    }
     #about .container{
         flex-direction:column;
+        align-items: center;
+    }
+    #about .container .about-box{
+        padding: 0 3em;
+    }
+}
+@media(min-width:500px) and (max-width:900px){
+    #about .container .about-box{
+        padding: 0 8em;
     }
 }
 
-/* end about services */
+
+/* start portolio section ================*/
+#portfolio{
+    text-align:center;
+}

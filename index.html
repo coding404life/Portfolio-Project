@@ -15,10 +15,10 @@
            <nav>
                <a class="logo" href="#"><span>P</span>ortfolio</a>
                <ul>
-                   <li><a href="#">home</a></li>
-                   <li><a href="#">work</a></li>
-                   <li><a href="#">blog</a></li>
-                   <li><a class="button" href='#'>Hire Me!</a></li>
+                   <li><a href="#home-banner">home</a></li>
+                   <li><a href="#portfolio">work</a></li>
+                   <li><a href="#cnt">blog</a></li>
+                   <li><a class="button" href='#about'>Hire Me!</a></li>
                </ul>
            </nav>
        </header>
@@ -41,7 +41,7 @@
                     <span>Making Responsive Pixel perfect website</span>
                     <span>Fixing Css issues in website</span>
                 </p>
-                <a class='button button-blue' href="#">See My work</a>
+                <a class='button button-blue' href="#portfolio">See My work</a>
             </div>
         </section>
 
@@ -94,7 +94,7 @@
                 <h2 class='visible-title'>portfolio</h2>
             </div>
            
-            <div class="container">
+            <div class="container content-center">
 
                 <!-- gallery 1 -->
                 <div class="port-gallery">
@@ -131,26 +131,34 @@
         <!-- start cnt section -->
         <article id='cnt'>
             <!-- awesome text box -->
-            <div>
-                <h1>Make It Awesome!</h1>
-                <p>There's nothing we wont try. Never heard the word impossible. This time there's no stopping us. The year is 1987 and NASA launches the last of Americas deep space probes.</p>
-            </div>
-
+            <div class="container nowrap">
+                <div class="flex-2">
+                    <h1>Make It Awesome!</h1>
+                    <p>There's nothing we wont try. Never heard the word impossible. This time there's no stopping us. The year is 1987 and NASA launches the last of Americas deep space probes.</p>
+                </div>
+    
                 <!-- hire me button -->
-            <button class='button'>Hire Me Now!</button>
+                <div class="flex-1 content-center align-center">
+                    <button class='button'>Hire Me Now!</button>
+                </div>
+            </div>
         </article>
 
             <!-- start testimonials -->
         <section id='testimonials'>
 
-            <div class="container">
-                <h1>What clients 
-                    <span>Feedback about me</span>
-                </h1>
-    
+            <div class="container column">
+                <div class="title">
+                    <h1>What clients 
+                        <span>Feedback about me</span>
+                    </h1>
+                </div>
+                
                 <!-- clients box -->
                 <figure class="client-box">
-                    <img src="" alt="#">
+                    <div class="circle-div">
+                        <img src="images/client-1.png" alt="Client">
+                    </div>
                     <h4>Allen Bell</h4>
                     <figcaption>Ux Designer</figcaption>
                 </figure>
@@ -159,33 +167,45 @@
                 
                 <!-- bullets -->
                 <div class="bullets">
-    
+                    <ul>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li class='active'><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
                 </div>
             </div> 
         </section>
         
         <!-- start footer -->
         <footer>
-            <div class="container">
+            <div class="container column align-center">
                 <!-- nav list -->
                 <div class="footer-nav">
                     <ul>
-                        <li>home</li>
-                        <li>about me</li>
-                        <li>work</li>
-                        <li>blog</li>
+                        <li><a href="#home-banner">home</a></li>
+                        <li><a href="#about">about me</a></li>
+                        <li><a href="#portfolio">work</a></li>
+                        <li><a href="#cnt">blog</a></li>
+                        <li>
+                            <input class="search-box" type="text" placeholder="Search...">
+                            <i class="fas fa-search"></i>
+                        </li>    
                     </ul> 
-                    <input type="text" placeholder="search...">    
                 </div>
                 <!-- social media links -->
-                <div class="social-media">
-
+                <div class="footer-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
 
-                <!-- copyrights -->
-                <hr>
-                <p>Copyright &amp; 2020. Portfolio By: Yahya Front-End Web Developer</p>
             </div>
+            <!-- copyrights -->
+                <hr>
+                <p class='copyrights'>Copyright &copy; 2020. Portfolio By Yahya Web-Developer</p>
         </footer>
     </body>
 </html>
